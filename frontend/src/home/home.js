@@ -9,12 +9,12 @@ function HomePage() {
     const file = e.target.files[0];
     
     if (!file) {
-      alert('Please select a file.');
+      alert('Please select a file');
       return;
     }
 
     if (!file.name.endsWith('.csv')) {
-      alert('Please select a valid CSV file.');
+      alert('Please select a valid CSV file');
       return;
     }
 
@@ -22,7 +22,7 @@ function HomePage() {
       setIsLoading(true);
 
       const formData = new FormData();
-      formData.append('csvFile', file);
+      formData.append('dataFile', file);
 
       const response = await fetch('http://127.0.0.1:5000/upload', {
         method: 'POST',
@@ -33,15 +33,16 @@ function HomePage() {
         const result = await response.text();
         console.log(result)
         setIsLoading(false);
-
-        navigate('/result');
+        
+        navigate('/result', { state: { resultData: result } });
       } else {
-        alert('File upload failed.');
+        setIsLoading(false);
+        alert('File upload failed');
       }
     } catch (error) {
       setIsLoading(false);
       console.error('Error uploading file:', error);
-      alert('File upload failed.');
+      alert('File upload failed');
     }
   };
 
@@ -73,12 +74,12 @@ function HomePage() {
           </label>
         )}
       </div>
-      <footer className="flex justify-between bg-[#29335C] text-white py-2 px-7">
-        <div className="text-sm">
+      <footer className="flex justify-between bg-[#29335C] text-white text-sm py-2 px-7 max-sm:text-xs">
+        <div>
           &copy; {new Date().getFullYear()} Tweet Classifier
         </div>
-        <div className="text-sm">
-        Developed by <a href='https://github.com/shinigami1908' target="_blank" className='hover:text-gray-300'>shinigami1908</a>, <a href='https://github.com/Shwetansu1603' target="_blank" className='hover:text-gray-300'>Shwetansu1603</a>, <a href='https://github.com/sharon-trisha' target="_blank" className='hover:text-gray-300'>sharon-trisha</a>
+        <div>
+          Developed by <a href='https://github.com/shinigami1908' target="_blank" rel="noopener noreferrer" className='hover:text-gray-300'>shinigami1908</a>, <a href='https://github.com/Shwetansu1603' target="_blank" rel="noopener noreferrer" className='hover:text-gray-300'>Shwetansu1603</a>, <a href='https://github.com/sharon-trisha' target="_blank" rel="noopener noreferrer" className='hover:text-gray-300'>sharon-trisha</a>
         </div>
       </footer>
     </div>
