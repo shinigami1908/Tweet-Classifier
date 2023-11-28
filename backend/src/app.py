@@ -1,9 +1,15 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_file
 from flask_cors import CORS
 import pandas as pd
+# from main import process_data
+from main_local_model import process_data
+
+# Uncomment if you want to use local model out of random forest and naive bayes or tweetnlp model
 
 app = Flask(__name__)
 CORS(app)
+
+processed_df = pd.DataFrame()
 
 @app.route('/upload', methods=['POST'])
 def upload_file():
@@ -15,7 +21,8 @@ def upload_file():
         
         if file.filename.endswith('.csv'):
             data = pd.read_csv(file)
-            json_data = data.to_json(orient='records')
+            processed_df = process_data(data)
+            json_data = processed_df.to_json(orient='records')
         else:
             return jsonify({'error': 'Please select a valid CSV file'}), 400
 
