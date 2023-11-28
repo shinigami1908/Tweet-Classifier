@@ -38,11 +38,9 @@ def load_model_svm():
     model_path = r'C:\Programming\VSC\Projects\Tweet Classifier\backend\model\trained_model_svm.joblib'
     return joblib.load(model_path)
 
-# Uncomment which model you want to use
-
-model = load_model_rf()
-# model = load_model_nb()
-# model = load_model_svm()
+model_rf = load_model_rf()
+model_nb = load_model_nb()
+model_svm = load_model_svm()
 
 def preprocess_text(text_list):
     stop_words = set(stopwords.words('english'))
@@ -65,7 +63,7 @@ def map_labels_to_names(binarized_labels, mlb_classes):
             mapped_labels.append(mlb_classes[i])
     return mapped_labels
 
-def predict_labels(text_list):
+def predict_labels(text_list, model):
     preprocessed_text = preprocess_text(text_list)
     predicted_labels = []
     for text in preprocessed_text:
@@ -78,8 +76,12 @@ def predict_labels(text_list):
 
 def process_data(df):
     text_list = df['text'].tolist()
-    processed_labels = predict_labels(text_list)
-    df['category'] = processed_labels
+    processed_labels_rf = predict_labels(text_list, model_rf)
+    df['category_rf'] = processed_labels_rf
+    processed_labels_nb = predict_labels(text_list, model_nb)
+    df['category_nb'] = processed_labels_nb
+    processed_labels_svm = predict_labels(text_list, model_svm)
+    df['category_svm'] = processed_labels_svm
 
     return df
 
