@@ -1,45 +1,64 @@
-### Tweet Classifier
+# Tweet Classifier
+
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) ![MUI](https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=mui&logoColor=white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white) ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)  ![Shell Script](https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white) ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+
+A web application that lets you classify tweets in different categories using local models (Random Forest, Naive Bayes, and SVM) or using the TweetNLP library. Along with creation of 3 local models and comparison between them.
+
+## 🛠 Tech Stack :
+### Languages :
+
+**Front-End**
+* HTML
+* CSS3
+* JavaScript
+
+**Back-End**
+* Python
+
+___
+
+### Framework :
+**Front-End**
+* ReactJS
+* TailwindUI
+
+**Back-End**
+* Flask
+
+___
+
+### Libraries :
+**Front-End**
+* MUI
+
+**Back-End**
+* TweetNLP
+* NLTK
+* Scikit-Learn
+* Matplotlib
+* Pandas
+
+## ✨ Features :
+- **Input Processing:** Users can upload CSV files containing unlabeled tweet data for classification.
+- **Classification and Comparison:** The application classifies tweets using Random Forest, Naive Bayes, and Support Vector Machine models and displays a side-by-side comparative analysis of their results.
+- **Analytical Tools:** Features include sorting tweets by category and filtering by category for refined analysis.
+- **Output Accessibility:** The classified data can be easily downloaded from the web application after processing.
+- **Ease of Operation:** A single batch file is available to simultaneously launch both frontend and backend services, requiring no additional commands from the user.
+
+## 🖥️ Preview :
+<img width="960" alt="image" src="https://github.com/shinigami1908/Tweet-Classifier/assets/78521741/37348423-364d-4daf-b4cd-3838636716d3">
+<img width="947" alt="image" src="https://github.com/shinigami1908/Tweet-Classifier/assets/78521741/72bf3bfa-8955-4b7e-b9f4-6e4c587162a3">
 
 
+## 🖼️ Architecture Diagram :
+<img width="462" alt="image" src="https://github.com/shinigami1908/Tweet-Classifier/assets/78521741/97505be2-7143-4929-87c0-af1c57273e19">
 
-Portfolio website made by Lalit Mangal.
+## 📈 Results :
+![WhatsApp Image 2023-11-28 at 21 28 01_d094bfc8](https://github.com/shinigami1908/Tweet-Classifier/assets/78521741/9e4a450d-1496-49b0-ac72-ab7bafec3a5a)
+![WhatsApp Image 2023-11-28 at 21 28 07_c857bce8](https://github.com/shinigami1908/Tweet-Classifier/assets/78521741/d29002be-1e57-4820-baaf-a19800879230)
+![WhatsApp Image 2023-11-28 at 21 28 13_ab9ccd50](https://github.com/shinigami1908/Tweet-Classifier/assets/78521741/3e4d632d-13dc-487f-9712-12450a3e7a70)
 
-<h2>🛠 Tech Stack :</h2>
-<ul>
-<li>HTML5</li>
-<li>CSS3</li>
-<li>JavaScript</li>
-</ul>
+<img width="382" alt="image" src="https://github.com/shinigami1908/Tweet-Classifier/assets/78521741/e2a908c2-2921-4248-bfb2-fe6757403d98">
 
-
-<b>Library :</b>
-<ul>
-<li>TailwindCSS</li>
-<li>Animate.style</li>
-<li>EmailJS</li>
-<li>TypedJS</li>
-<li>wowJS</li>
-</ul>
-
-<h2>✨ Features :</h2>
-
-```
-- Completely responsive website for all types of display devices.
-- Has a light mode and dark mode that uses local storage.
-- Uses API to fetch data from CodeForces, CodeChef, Hackerrank and a library to fetch GitHub contribution graph
-- Has multiple hidden easter eggs.
-- Uses vector image to make the site load faster.
-- Has all types of animations like block animations, loop animations and hover animations.
-- A contact us form made using EmailJS is implemented that auto sends the form info to my email.
-- .me domain purchased for 1 year from namecheap.
-```
-To see complete list of all easter eggs, <a href=https://github.com/shinigami1908/Portfolio/blob/master/Assets/eastereggs.txt>click here</a>.
-
-<h2>🖥️ Preview :</h2>
-<img width="960" alt="image" src="https://user-images.githubusercontent.com/78521741/223700054-b56a3920-4835-43b8-a0a7-09a51417c179.png">
-<img width="960" alt="image" src="https://user-images.githubusercontent.com/78521741/223700094-9b9a10c7-7321-4580-a8db-e215d260368f.png">
-<img width="157" alt="image" src="https://user-images.githubusercontent.com/78521741/223700505-932f4ef9-a8ca-43c4-8669-bf5694d3097f.png">
-<img width="154" alt="image" src="https://user-images.githubusercontent.com/78521741/223700558-f39d601c-5d19-4f8a-bd2e-9e312dcc6519.png">
-
-<h2>📜 License :</h2>
-[MIT](https://opensource.org/licenses/MIT) Copyright (c) 2023 Lalit Mangal
+## 📜 License :
+![MIT](https://opensource.org/licenses/MIT) Copyright (c) 2023 Lalit Mangal
