@@ -61,4 +61,4 @@ ___
 <img width="382" alt="image" src="https://github.com/shinigami1908/Tweet-Classifier/assets/78521741/e2a908c2-2921-4248-bfb2-fe6757403d98">
 
 ## 📜 License :
-![MIT](https://opensource.org/licenses/MIT) Copyright (c) 2023 Lalit Mangal
+<a href="https://opensource.org/licenses/MIT">MIT</a> Copyright (c) 2023 Lalit Mangal
